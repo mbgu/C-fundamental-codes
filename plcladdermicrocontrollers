@@ -104,6 +104,48 @@ output = 0;
 }
 
 
+#include <stdio.h>
+#include <stdbool.h>
+#include <unistd.h>
+
+// Define PLC Inputs
+bool sensor1 = false; // Conveyor belt start sensor
+bool sensor2 = false; // Conveyor belt stop sensor
+
+// Define PLC Outputs
+bool motorOn = false; // Conveyor belt motor status
+
+void startConveyorBelt() {
+    if (sensor1 && !sensor2) {
+        motorOn = true;
+    } else {
+        motorOn = false;
+    }
+}
+
+int main() {
+    while (true) {
+        // Simulate sensor input changes
+        sensor1 = !sensor1;
+        sensor2 = !sensor2;
+
+        // Execute PLC logic
+        startConveyorBelt();
+
+        // Simulate conveyor belt operation
+        if (motorOn) {
+            printf("Conveyor belt is running.\n");
+        } else {
+            printf("Conveyor belt is stopped.\n");
+        }
+
+        // Sleep to simulate real-time operation
+        usleep(1000000); // Sleep for 1 second
+    }
+
+    return 0;
+}
+
 
 
 
