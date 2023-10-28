@@ -1,0 +1,35 @@
+//https://control.com/technical-articles/plc-ladder-logic-on-an-arduino-introduction-to-openplc/
+//https://github.com/akelmas/kn_plc
+//https://github.com/taleswsouza/LadderApp/blob/master/images/ladderapp-running.gif
+/*
+Blink
+*/
+
+int led=13;
+// 
+
+void setup() {
+
+// 
+
+pinMode(led, OUTPUT);
+
+
+// loop fonksiyonu sürekli olarak tekrar tekrar çalışır
+void loop() {
+digitalWrite(13, HIGH); //LED (HIGH voltage level)
+delay(1000); // 1 moment wait
+digitalWrite(13, LOW); // LOW voltage and close LED
+delay(1000); // 1 moment wait
+
+switchState = ReadSwitchState (whichSwitch);
+if (switchState) {
+TurnSwitchOff (whichSwitch);
+} else {
+TurnSwitchOn (whichSwitch);
+}
+arrays
+int myData [15];
+long yourWorkDay [7];
+float sıcaklık [200];
+
