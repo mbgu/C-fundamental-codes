@@ -15,7 +15,7 @@ void setup() {
 pinMode(led, OUTPUT);
 
 
-// loop fonksiyonu sürekli olarak tekrar tekrar çalışır
+// loop funct. works repeatedly
 void loop() {
 digitalWrite(13, HIGH); //LED (HIGH voltage level)
 delay(1000); // 1 moment wait
