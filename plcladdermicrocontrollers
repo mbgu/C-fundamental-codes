@@ -33,3 +33,78 @@ int myData [15];
 long yourWorkDay [7];
 float sıcaklık [200];
 
+
+
+Structured text
+
+PROGRAM firstProgram
+VAR
+    x: BOOL;   (* Boolean variable *)
+    y: INT;    (* Integer variable *)
+END_VAR
+
+x := TRUE;   (* Set x to TRUE *)
+y := 42;     (* Set y to 42 *)
+
+IF x THEN
+    y := y + 1;   (* Increment y if x is TRUE *)
+END_IF
+
+C CODE
+
+#include <stdio.h>
+
+int main() {
+    int switchInput = 0; // Anahtar girişi
+    int motorOutput = 0; // Motor çıkışı
+
+    while (1) {
+        // Anahtar girişini oku
+        printf("Anahtar durumu (0 veya 1): ");
+        scanf("%d", &switchInput);
+
+        // Motor çıkışını kontrol et
+        if (switchInput == 1) {
+            motorOutput = 1; // Motoru aç
+        } else {
+            motorOutput = 0; // Motoru kapat
+        }
+
+        // Motor durumunu göster
+        printf("Motor Durumu: %d\n", motorOutput);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int input1, input2;
+    int output;
+
+    // Girişlerden veri okuma
+    printf("Giriş 1 değeri: ");
+    scanf("%d", &input1);
+    
+    printf("Giriş 2 değeri: ");
+    scanf("%d", &input2);
+
+    // Mantıksal işlem
+    if (input1 == 1 && input2 == 1) {
+        output = 1;
+    } else {
+output = 0;
+    }
+
+    // Çıktıyı gösterme
+    printf("Çıkış değeri: %d\n", output);
+
+    return 0;
+}
+
+
+
+
+
+
