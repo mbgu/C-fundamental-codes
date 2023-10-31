@@ -2,7 +2,22 @@
 //https://github.com/akelmas/kn_plc
 //https://github.com/taleswsouza/LadderApp/blob/master/images/ladderapp-running.gif
 /*
-Blink
+C codes for some controller operations 
+
+remember for writing 
+
+C codes changed with types of controllers. Logic controllers can be programmed with C.
+
+A PLC can be programmed with 
+
+C or
+
+Ladder logic, ,Funct. Block Diagram, Flow Chart, Automation Basic etc.
+
+Integrated development environment(IDE) of some PLCs generally provided by C compiler.
+
+Engineering students can use these fundamental codes.
+
 */
 
 int led=13;
